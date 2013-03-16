@@ -53,10 +53,6 @@ PRODUCT_COPY_FILES += \
     device/sony/tamsui-common/config/media_codecs.xml:system/etc/media_codecs.xml \
     device/sony/tamsui-common/config/AudioFilter.csv:system/etc/AudioFilter.csv
 
-# QCOM Power
-PRODUCT_PACKAGES += \
-    power.msm7x27a \
-
 # Omx
 PRODUCT_PACKAGES += \
     libdivxdrmdecrypt \
