@@ -30,7 +30,7 @@ BOARD_KERNEL_BASE := 0x00200000
 BOARD_RECOVERY_BASE := 0x00200000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_FORCE_BOOT_ADDRESS := 0x00208000
-BOARD_FORCE_RAMDISK_ADDRESS := 0x01400000
+SONY_FORCE_RAMDISK_ADDRESS := 0x01400000
 
 # Wifi related defines
 BOARD_WLAN_DEVICE                := bcmdhd
@@ -88,6 +88,7 @@ ENABLE_WEBGL := true
 TARGET_FORCE_CPU_UPLOAD := true
 
 # Custom boot
+BOARD_WANTS_EMMC_BOOT := true
 TARGET_RECOVERY_PRE_COMMAND := "touch /cache/recovery/boot;sync;"
 BOARD_CUSTOM_BOOTIMG_MK := device/sony/tamsui-common/custombootimg.mk
 TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/sony/tamsui-common/releasetools/semc_ota_from_target_files
