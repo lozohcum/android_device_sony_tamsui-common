@@ -101,7 +101,8 @@ PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 PRODUCT_COPY_FILES += \
     device/sony/tamsui-common/config/init.sony.service.rc:root/init.sony.service.rc \
     device/sony/tamsui-common/config/init.sony.rc:root/init.sony.rc \
-    device/sony/tamsui-common/config/ueventd.sony.rc:root/ueventd.sony.rc
+    device/sony/tamsui-common/config/ueventd.sony.rc:root/ueventd.sony.rc \
+    device/sony/tamsui-common/config/modelid_cfg.sh:system/bin/modelid_cfg.sh
 
 # system props for the MM modules
 PRODUCT_PROPERTY_OVERRIDES += \
