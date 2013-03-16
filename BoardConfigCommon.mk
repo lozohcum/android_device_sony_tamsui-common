@@ -67,6 +67,9 @@ BOARD_NEEDS_MEMORYHEAPPMEM := true
 BOARD_USES_QCOM_HARDWARE := true
 BOARD_USES_QCOM_LIBS := true
 
+# RIL
+BOARD_RIL_CLASS := ../../../device/sony/tamsui-common/ril/
+
 # GPS
 BOARD_USES_QCOM_LIBRPC := true
 BOARD_USES_QCOM_GPS := true
