@@ -9,14 +9,19 @@ TARGET_BOOTLOADER_BOARD_NAME := tamsui
 TARGET_BOARD_PLATFORM := msm7x27a
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno200
 
+TARGET_ARCH := arm
 TARGET_CPU_ABI  := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_ARCH_VARIANT := armv7-a-neon
+# cortex-a9 is used to take advantage of NEON optimizations
+TARGET_ARCH_VARIANT_CPU := cortex-a9
+TARGET_ARCH_VARIANT_FPU := neon
 TARGET_CPU_SMP := true
 TARGET_CORTEX_CACHE_LINE_32 := true
 TARGET_USE_SPARROW_BIONIC_OPTIMIZATION := true
 
 ARCH_ARM_HAVE_TLS_REGISTER := true
+ARCH_ARM_HAVE_32_BYTE_CACHE_LINES := true
 
 TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
 TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
@@ -55,6 +60,8 @@ TARGET_QCOM_HDMI_OUT := false
 TARGET_USES_ION := true
 TARGET_NO_HW_VSYNC := true
 BOARD_EGL_CFG := device/sony/tamsui-common/config/egl.cfg
+TARGET_QCOM_DISPLAY_VARIANT := caf
+BOARD_USE_SKIA_LCDTEXT := true
 
 TARGET_PROVIDES_LIBLIGHT := true
 
@@ -66,6 +73,11 @@ BOARD_NEEDS_MEMORYHEAPPMEM := true
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
 BOARD_USES_QCOM_LIBS := true
+
+# CAF Options
+TARGET_AVOID_DRAW_TEXTURE_EXTENSION := true
+TARGET_USES_16BPPSURFACE_FOR_OPAQUE := true
+BOARD_ADRENO_DECIDE_TEXTURE_TARGET := true
 
 # RIL
 BOARD_RIL_CLASS := ../../../device/sony/tamsui-common/ril/
