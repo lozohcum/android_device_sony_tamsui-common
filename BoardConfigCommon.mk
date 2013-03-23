@@ -48,12 +48,11 @@ BOARD_LEGACY_NL80211_STA_EVENTS  := true
 
 # Graphics
 USE_OPENGL_RENDERER := true
-TARGET_USES_OVERLAY := false
+TARGET_USES_OVERLAY := true
 TARGET_HAVE_BYPASS  := false
 TARGET_USES_GENLOCK := true
 TARGET_QCOM_HDMI_OUT := false
 TARGET_USES_ION := true
-TARGET_NO_HW_VSYNC := true
 BOARD_EGL_CFG := device/sony/tamsui-common/config/egl.cfg
 
 TARGET_PROVIDES_LIBLIGHTS := true
